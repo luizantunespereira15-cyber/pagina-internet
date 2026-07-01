@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Motivação</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #0077cc;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+
+        #mensagem {
+            margin-top: 25px;
+            font-size: 20px;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌟 Nunca Desista!</h1>
+
+    <p>
+        O sucesso é construído um passo de cada vez. Cada desafio é uma oportunidade
+        para aprender, crescer e se tornar uma versão melhor de si mesmo.
+        Continue acreditando no seu potencial!
+    </p>
+
+    <button onclick="motivar()">Receber Motivação</button>
+
+    <div id="mensagem"></div>
+</div>
+
+<script>
+    const frases = [
+        "Você é mais forte do que imagina! 💪",
+        "Grandes conquistas começam com pequenos passos. 🚀",
+        "Nunca pare de acreditar em você! ⭐",
+        "Seu esforço de hoje será sua vitória de amanhã. 🏆",
+        "Cada novo dia é uma nova oportunidade. 🌞",
+        "O impossível só existe até alguém conseguir. 🔥",
+        "Persistência transforma sonhos em realidade. ✨"
+    ];
+
+    function motivar() {
+        const sorteio = Math.floor(Math.random() * frases.length);
+        document.getElementById("mensagem").innerHTML = frases[sorteio];
+    }
+</script>
+
+</body>
+</html>
